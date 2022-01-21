@@ -16,6 +16,7 @@ class AddNotesByRetrofit : AppCompatActivity() {
     private lateinit var  viewModel:NotesViewModel
     private var title:String?=null
     private var body:String?=null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
       binding= DataBindingUtil. setContentView(this,R.layout.activity_add_notes_by_retrofit)
@@ -26,7 +27,7 @@ class AddNotesByRetrofit : AppCompatActivity() {
     private fun getNewNotes() {
        binding.buttonSave.setOnClickListener {
            val contents=contents()
-           viewModel.addNewNotes(contents).observe(this){
+           viewModel.addNewNotes().observe(this){
                val response=it.body()
                Log.d("AddNotes", "NewNote response : " + Gson().toJson(response))
            }

@@ -1,10 +1,11 @@
 package com.example.notepad.database
 
+import androidx.room.Dao
 import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import com.example.notepad.model.Content
+import com.example.notepad.model.AddNotes
 
+@Dao
 interface NoteDao {
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(word: Content)
+    @Insert
+    suspend fun addQuote(quotes: AddNotes?)
 }

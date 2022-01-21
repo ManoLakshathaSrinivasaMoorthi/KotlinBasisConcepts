@@ -22,13 +22,14 @@ class NotesRepository {
     suspend fun getQuotes(page: Int){
 
         if(applicationContext?.let { NetworkUtils.isInternetAvailable(it) } == true){
-            val result = quoteService?.getNewNotes(page)
+            val result = quoteService?.getNewNotes()
             if(result?.body() != null){
                // quoteDatabase?.wordDao()?.insert(result.body()!!)
+              //  quoteDatabase?.wordDao()?.insert(result.body()!!.getContent())
             }
         }
         else{
-            //val quotes = quoteDatabase?.wordDao()?.insert()
+          //  val quotes = quoteDatabase?.wordDao()?.insert(this)
 //            val quoteList = QuoteList(1,1,1,quotes, 1, 1)
             //quotesLiveData.postValue(quoteList)
         }

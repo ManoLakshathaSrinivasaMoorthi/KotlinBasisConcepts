@@ -8,7 +8,7 @@ import retrofit2.http.Query
 interface EndUrl {
 
     @POST("/dev/notes/add")
-    suspend fun  getNewNotes(@Query("notes") patient: Int):Response<AddNotes>
+    suspend fun  getNewNotes():Response<AddNotes>
 
 
 }
