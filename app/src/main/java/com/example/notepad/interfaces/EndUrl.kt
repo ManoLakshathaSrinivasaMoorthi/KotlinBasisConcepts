@@ -1,14 +1,17 @@
 package com.example.notepad.interfaces
 
 import com.example.notepad.model.AddNotes
-import retrofit2.Response
+import com.example.notepad.model.Content
+import retrofit2.Call
+import retrofit2.http.Body
 import retrofit2.http.POST
-import retrofit2.http.Query
 
 interface EndUrl {
 
     @POST("/dev/notes/add")
-    suspend fun  getNewNotes():Response<AddNotes>
+     fun  getNewNotes(@Body contents: Content?): Call<AddNotes?>?
 
+//    @POST("/dev/notes/get")
+//    fun getReadNotes(mobileno: String): Call<AddNotes?>?
 
 }

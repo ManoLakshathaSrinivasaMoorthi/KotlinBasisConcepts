@@ -3,29 +3,62 @@ package com.example.notepad.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.liveData
 import com.example.notepad.apiClient.RetrofitClient
-import com.example.notepad.database.NoteDatabase
-import com.example.notepad.interfaces.EndUrl
 import com.example.notepad.model.AddNotes
+import com.example.notepad.model.Content
+import retrofit2.Call
+import retrofit2.Callback
 import retrofit2.Response
 
 class NotesViewModel:ViewModel() {
-    private var patientObservable: MutableLiveData<AddNotes>? = null
-    private lateinit var retService: EndUrl
+    private var patientObservable: MutableLiveData<AddNotes?>? = null
+
+    fun addNewNotes(contents: Content): LiveData<AddNotes?>? {
+
+        patientObservable = MutableLiveData()
+        getNotesresponse(contents)
+        return  patientObservable
 
 
-    fun addNewNotes(): LiveData<Response<AddNotes>> =  liveData  {
-        retService = RetrofitClient.getretrofit()
-            .create(EndUrl::class.java)
-        patientObservable = MutableLiveData<AddNotes>()
-
-        val response = retService.getNewNotes()
-
-        emit(response)
-        return@liveData
     }
 
+    private fun getNotesresponse(contents: Content) {
+      val call:Call<AddNotes?>?= RetrofitClient().getApiClient()?.getNewNotes(contents)
+        call?.enqueue(object :Callback<AddNotes?>{
+            override fun onResponse(call: Call<AddNotes?>, response: Response<AddNotes?>) {
+            if(response.isSuccessful){
+             if(patientObservable==null){
+               patientObservable=MutableLiveData<AddNotes?>()
+             }
+                patientObservable?.value = response.body()
+            }
+                else{
+                 val commonResponse=AddNotes()
+                 commonResponse.setMessage("Api Called failed")
+            }
+            }
+
+            override fun onFailure(call: Call<AddNotes?>, t: Throwable) {
+
+            }
+        })
+    }
+
+
+
+//    fun readNotes(mobileno: String): LiveData<AddNotes?>? {
+//
+//        patientObservable = MutableLiveData()
+//        getReadNotes(mobileno)
+//        return  patientObservable
+//
+//
+//    }
+
+//    private fun getReadNotes(mobileno: String) {
+//        val call:Call<AddNotes?>?= RetrofitClient().getApiClient()?.getReadNotes(mobileno)
+//
+//    }
 
 
 }

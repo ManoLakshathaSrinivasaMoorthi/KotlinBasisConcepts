@@ -1,8 +1,9 @@
 package com.example.notepad.view
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.notepad.R
@@ -14,32 +15,33 @@ import com.google.gson.Gson
 class AddNotesByRetrofit : AppCompatActivity() {
     private lateinit var binding:ActivityAddNotesByRetrofitBinding
     private lateinit var  viewModel:NotesViewModel
-    private var title:String?=null
-    private var body:String?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
       binding= DataBindingUtil. setContentView(this,R.layout.activity_add_notes_by_retrofit)
-      viewModel=ViewModelProvider(this).get(NotesViewModel::class.java)
+      viewModel= ViewModelProvider(this)[NotesViewModel::class.java]
         getNewNotes()
     }
 
     private fun getNewNotes() {
        binding.buttonSave.setOnClickListener {
-           val contents=contents()
-           viewModel.addNewNotes().observe(this){
-               val response=it.body()
-               Log.d("AddNotes", "NewNote response : " + Gson().toJson(response))
+           val contents=Content()
+            contents.setNotes(binding.editTextBody.text.toString())
+//           contents.setMobileno("+9047310589")
+           viewModel.addNewNotes(contents)?.observe(this){responses->
+               Log.d("AddNotes", "Response: \n "+ Gson().toJson(responses))
+             if(responses?.getStatusCode()?.equals("200") == true){
+//                 viewModel.readNotes()?.observe(this){
+//
+//                 }
+               val intent=Intent(this,ReadNotesByRetrofit::class.java)
+                 intent.putExtra("",responses.getContent().toString())
+                 startActivity(intent)
+             }
            }
        }
 
     }
 
-    private fun contents(): Content {
-         val notes=Content()
-       notes.notes= binding.editTextTitle.toString()
 
-
-        return notes
-    }
 }
