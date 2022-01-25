@@ -1,5 +1,6 @@
 package com.example.notepad.apiClient
 
+import com.example.notepad.interfaces.EndUrl
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -10,9 +11,13 @@ import java.util.concurrent.TimeUnit
 
 class RetrofitClient {
     companion object {
-
-
         private const val BASE_URL: String = "https://3xs79s0rob.execute-api.us-west-1.amazonaws.com"
+
+/*   fun getApiClient():EndUrl?{
+         getRetrofit()
+    return retrofit!!.create(EndUrl::class.java)
+   }
+
         private val interceptor = HttpLoggingInterceptor().apply {
             this.level = HttpLoggingInterceptor.Level.BODY
         }
@@ -22,7 +27,7 @@ class RetrofitClient {
                 .readTimeout(20, TimeUnit.SECONDS)
                 .writeTimeout(25, TimeUnit.SECONDS)
 
-        }.build()
+        }.build()*/
 
 
 
