@@ -2,11 +2,13 @@ package com.example.notepad.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.notepad.R
 import com.example.notepad.databinding.ActivityReadNotesByRetrofitBinding
 import com.example.notepad.viewmodel.NotesViewModel
+import com.google.gson.Gson
 
 class ReadNotesByRetrofit : AppCompatActivity() {
     private lateinit var binding:ActivityReadNotesByRetrofitBinding
@@ -14,12 +16,17 @@ class ReadNotesByRetrofit : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
       binding=DataBindingUtil.  setContentView(this,R.layout.activity_read_notes_by_retrofit)
-        viewModel=ViewModelProvider(this).get(NotesViewModel::class.java)
+        viewModel= ViewModelProvider(this)[NotesViewModel::class.java]
         getIntests()
     }
 
     private fun getIntests() {
-         val mobile=intent.getStringExtra("",)
-        binding.MobileNo.text = mobile
+
+
+//        viewModel.readNotes(body)?.observe(this){ response->
+//            Log.d("ReadNotes", "Response: \n "+ Gson().toJson(response))
+//            binding.MobileNo.text = response?.getMobileno()
+//        }
+
     }
 }

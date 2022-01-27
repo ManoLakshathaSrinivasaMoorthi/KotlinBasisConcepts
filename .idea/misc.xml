@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Data/CrudOperation/app/src/main/res/layout/activity_add_notes_by_retrofit.xml" value="0.16981132075471697" />
+        <entry key="..\:/Data/CrudOperation/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Data/CrudOperation/app/src/main/res/layout/activity_read_notes_by_retrofit.xml" value="0.1" />
+        <entry key="..\:/Data/CrudOperation/app/src/main/res/layout/notes_item.xml" value="0.1" />
       </map>
     </option>
   </component>

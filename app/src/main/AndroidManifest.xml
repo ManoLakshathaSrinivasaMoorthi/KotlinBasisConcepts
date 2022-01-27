@@ -16,10 +16,10 @@
             android:name=".view.ReadNotesByRetrofit"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".view.AddNotesByRetrofit"
             android:exported="false" />
         <activity
-            android:name=".view.AddNotesByRetrofit"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

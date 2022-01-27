@@ -48,9 +48,11 @@ class RetrofitClient {
    }
 
     private fun getRetrofit() {
+        val interceptor = HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY);
+        val okhttpclient = OkHttpClient.Builder().addNetworkInterceptor(interceptor).build()
         retrofit =  Retrofit.Builder()
                 .baseUrl(BASE_URL)
-//               .client(client)
+               .client(okhttpclient)
                .addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))
                .build()
     }
