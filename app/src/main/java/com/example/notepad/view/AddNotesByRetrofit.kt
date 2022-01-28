@@ -1,10 +1,12 @@
 package com.example.notepad.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import com.example.notepad.MainActivity
 import com.example.notepad.R
 import com.example.notepad.database.NoteDatabase
 import com.example.notepad.databinding.ActivityAddNotesByRetrofitBinding
@@ -18,7 +20,7 @@ import java.util.*
 class AddNotesByRetrofit : AppCompatActivity() {
     private lateinit var binding: ActivityAddNotesByRetrofitBinding
     private lateinit var viewModel: NotesViewModel
-    lateinit var appDatabase: NoteDatabase
+    private lateinit var appDatabase: NoteDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +33,7 @@ class AddNotesByRetrofit : AppCompatActivity() {
     private fun getNewNotes() {
         binding.buttonSave.setOnClickListener {
             val contents = Content()
-            contents.setNotes(binding.editTextBody.text.toString())
+            contents.setNotes(binding.editTextTitle.text.toString() +" "+ binding.editTextBody.text.toString())
             contents.setMobileno(Constant.ACCOUNT_NAME)
             contents.setCreatedtime(timestampToDate())
 
@@ -39,25 +41,26 @@ class AddNotesByRetrofit : AppCompatActivity() {
                 Log.d("AddNotes", "Response: \n " + Gson().toJson(response))
                 if (response != null) {
                     response.getContent()?.let {
-                        appDatabase.userDao()
-                            .insertAll(response.getContent())
+                        appDatabase.userDao().insertAll(response.getContent())
+                        val intent= Intent(this,MainActivity::class.java)
+//                        intent.putExtra(Constant.Intentkeys.NOTES_KEY, response.getContent()?.getKey())
+//                        intent.putExtra(Constant.Intentkeys.NOTES_TIME,response.getContent()?.getCreatedtime())
+//                        intent.putExtra(Constant.Intentkeys.NOTES_CONTENT,response.getContent()?.getNotes())
+                        intent.putExtra(Constant.Intentkeys.NOTES_MOBILE,response.getContent()?.getMobileno())
+                        startActivity(intent)
+                        finish()
                     }
-                    response.getContent()?.let { setData(it) }
+
                 }
-                // setData(appDatabase.userDao().getAllUser().let { appDatabase.userDao().getAllUser() })
+
             }
         }
     }
 
-    private fun setData(let: Any) {
 
-    }
-
-
-    fun timestampToDate(): String {
+    private fun timestampToDate(): String {
         val df: SimpleDateFormat = SimpleDateFormat("EEE, d MMM yyyy, HH:mm:ss")
-        val date: String = df.format(Calendar.getInstance().time)
-        return date
+        return df.format(Calendar.getInstance().time)
     }
 
 }

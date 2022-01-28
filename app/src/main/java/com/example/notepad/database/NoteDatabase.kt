@@ -18,20 +18,13 @@ abstract class NoteDatabase: RoomDatabase() {
         @Volatile
         private var INSTANCE: NoteDatabase? = null
 
-        fun getDatabase(
-            context: Context
-        ): NoteDatabase {
-            // if the INSTANCE is not null, then return it,
-            // if it is, then create the database
+        fun getDatabase(context: Context): NoteDatabase {
+
             return INSTANCE ?: synchronized(this) {
-                val instance = Room.databaseBuilder(
-                    context.applicationContext,
-                    NoteDatabase::class.java,
-                    "database"
-                ).allowMainThreadQueries()
+                val instance = Room.databaseBuilder(context.applicationContext,
+                    NoteDatabase::class.java, "database").allowMainThreadQueries()
                     .build()
                 INSTANCE = instance
-                // return instance
                 instance
             }
         }

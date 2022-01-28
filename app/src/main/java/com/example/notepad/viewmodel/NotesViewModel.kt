@@ -48,17 +48,17 @@ class NotesViewModel:ViewModel() {
 
 
 
-    fun readNotes(): LiveData<AddNotes?>? {
+    fun readNotes(notes: String): LiveData<AddNotes?>? {
 
         patientlbservable = MutableLiveData()
-        getReadNotes()
+        getReadNotes(notes)
         return  patientlbservable
 
 
     }
 
-    private fun getReadNotes() {
-        val call:Call<AddNotes?>?= RetrofitClient().getApiClient()?.getReadNotes()
+    private fun getReadNotes(notes: String) {
+        val call:Call<AddNotes?>?= RetrofitClient().getApiClient()?.getReadNotes(notes)
         call?.enqueue(object :Callback<AddNotes?>{
             override fun onResponse(call: Call<AddNotes?>, response: Response<AddNotes?>) {
                 if(response.isSuccessful){

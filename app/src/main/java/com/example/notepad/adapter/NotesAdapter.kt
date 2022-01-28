@@ -4,15 +4,12 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.notepad.R
 import com.example.notepad.model.Content
-import java.util.ArrayList
 
-class NotesAdapter(private var context: Context?, messages: List<Content>) :
+class NotesAdapter(private var context: Context?, messages: List<Content>?,private var teamNameArrayList: List<String>?) :
     RecyclerView.Adapter<NotesAdapter.ViewHolder>() {
     private var messages: List<Content>? = messages
 
@@ -22,9 +19,9 @@ class NotesAdapter(private var context: Context?, messages: List<Content>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val consultMessage:Content = messages!![position]
-       holder.note.setText(consultMessage.getNotes())
-        holder.contenttime.setText(consultMessage.getCreatedtime())
+        val consultMessage: Content = messages!![position]
+        holder.note.text = consultMessage.getNotes()
+        holder.contenttime.text = consultMessage.getCreatedtime()
     }
 
     override fun getItemCount(): Int {

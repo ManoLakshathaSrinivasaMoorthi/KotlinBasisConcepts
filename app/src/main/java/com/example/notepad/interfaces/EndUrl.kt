@@ -10,10 +10,11 @@ import retrofit2.http.Query
 
 interface EndUrl {
 
-    @POST("/dev/notes/add")
+    @POST("add")
      fun  getNewNotes(@Body contents: Content?): Call<AddNotes?>?
 
-    @GET("/dev/notes/get?mobileno=+919597580128")
-    fun getReadNotes(): Call<AddNotes?>?
+    @GET("get")
+    fun getReadNotes(@Query("mobileno") notes: String): Call<AddNotes?>?
 
+    //?mobileno=+919597580128
 }
