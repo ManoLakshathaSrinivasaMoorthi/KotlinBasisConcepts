@@ -26,10 +26,10 @@ class AddNotesByRetrofit : AppCompatActivity() {
     private fun getNewNotes() {
        binding.buttonSave.setOnClickListener {
            val contents=contents()
-           viewModel.addNewNotes(contents).observe(this){
+          /* viewModel.addNewNotes(contents).observe(this){
                val response=it.body()
                Log.d("AddNotes", "NewNote response : " + Gson().toJson(response))
-           }
+           }*/
        }
 
     }

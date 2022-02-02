@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NotePad">
         <activity
+            android:name=".AdaptiveUIScreen.AdaptiveUIscreens"
+            android:exported="false" />
+        <activity
             android:name=".encrptiondecryption.DecryptionActivity"
             android:exported="false" />
         <activity
@@ -22,13 +25,13 @@
             android:name=".encrptiondecryption.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".AdaptiveUIScreen.AdaptiveUIscreens"
+            android:name=".view.AddNotesByRetrofit"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".view.AddNotesByRetrofit"
+            android:name=".AdaptiveUIScreen.SCreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -17,13 +17,13 @@ class NotesViewModel:ViewModel() {
     private lateinit var database:NoteDatabase
 
     fun addNewNotes( patient: Int): LiveData<Response<AddNotes>> =  liveData  {
-        retService = RetrofitClient.getretrofit()
+       /* retService = RetrofitClient.getretrofit()
             .create(EndUrl::class.java)
         patientObservable = MutableLiveData<AddNotes>()
-          database.wordDao().insert(patient)
+          /database.wordDao().insert(patient)
         val response = retService.getNewNotes(patient)
         emit(response)
-        return@liveData
+        return@liveData*/
     }
 
 

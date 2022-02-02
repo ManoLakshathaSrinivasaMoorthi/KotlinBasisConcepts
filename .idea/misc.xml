@@ -7,11 +7,16 @@
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/drawable/button1.xml" value="0.23958333333333334" />
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/drawable/ic_rain.xml" value="0.23958333333333334" />
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout-land/activity_adaptive_uiscreens.xml" value="0.10493827160493827" />
+        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout-sw720dp-land/activity_screen.xml" value="0.1" />
+        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout-sw720dp-port/activity_screen.xml" value="0.10078125" />
+        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout-w320dp-port/activity_screen.xml" value="0.134375" />
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/activity_adaptive_uiscreens.xml" value="0.2234375" />
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/activity_decryption.xml" value="0.13072916666666667" />
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/activity_encrption.xml" value="0.13072916666666667" />
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/activity_home.xml" value="0.11666666666666667" />
+        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/activity_screen.xml" value="0.134375" />
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/forecast_grid.xml" value="0.2234375" />
+        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/simple_selectable_list_item.xml" value="0.11927083333333334" />
       </map>
     </option>
   </component>
