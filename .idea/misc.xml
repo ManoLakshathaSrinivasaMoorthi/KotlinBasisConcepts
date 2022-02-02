@@ -4,6 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Data/CrudOperation/app/src/main/res/layout/activity_add_notes_by_retrofit.xml" value="0.16981132075471697" />
+        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/drawable/button1.xml" value="0.23958333333333334" />
+        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/drawable/ic_rain.xml" value="0.23958333333333334" />
+        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/activity_adaptive_uiscreens.xml" value="0.2234375" />
+        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/forecast_grid.xml" value="0.2234375" />
       </map>
     </option>
   </component>
