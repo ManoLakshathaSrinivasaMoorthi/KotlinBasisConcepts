@@ -25,7 +25,7 @@ class NotesViewModel:ViewModel() {
     }
 
     private fun getNotesresponse(contents: Content) {
-      val call:Call<AddNotes?>?= RetrofitClient().getApiClient()?.getNewNotes(contents)
+      val call:Call<AddNotes?>?= RetrofitClient().getApiClient(true,true)?.getNewNotes(contents)
         call?.enqueue(object :Callback<AddNotes?>{
             override fun onResponse(call: Call<AddNotes?>, response: Response<AddNotes?>) {
             if(response.isSuccessful){
@@ -58,7 +58,7 @@ class NotesViewModel:ViewModel() {
     }
 
     private fun getReadNotes(notes: String) {
-        val call:Call<AddNotes?>?= RetrofitClient().getApiClient()?.getReadNotes(notes)
+        val call:Call<AddNotes?>?= RetrofitClient().getApiClient(true,true)?.getReadNotes(notes)
         call?.enqueue(object :Callback<AddNotes?>{
             override fun onResponse(call: Call<AddNotes?>, response: Response<AddNotes?>) {
                 if(response.isSuccessful){

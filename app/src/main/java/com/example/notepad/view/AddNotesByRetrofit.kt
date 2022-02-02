@@ -43,9 +43,6 @@ class AddNotesByRetrofit : AppCompatActivity() {
                     response.getContent()?.let {
                         appDatabase.userDao().insertAll(response.getContent())
                         val intent= Intent(this,MainActivity::class.java)
-//                        intent.putExtra(Constant.Intentkeys.NOTES_KEY, response.getContent()?.getKey())
-//                        intent.putExtra(Constant.Intentkeys.NOTES_TIME,response.getContent()?.getCreatedtime())
-//                        intent.putExtra(Constant.Intentkeys.NOTES_CONTENT,response.getContent()?.getNotes())
                         intent.putExtra(Constant.Intentkeys.NOTES_MOBILE,response.getContent()?.getMobileno())
                         startActivity(intent)
                         finish()
