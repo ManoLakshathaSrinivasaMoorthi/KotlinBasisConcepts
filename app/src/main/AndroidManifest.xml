@@ -13,6 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NotePad">
         <activity
+            android:name=".encrptiondecryption.DecryptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".encrptiondecryption.EncrptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".encrptiondecryption.HomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".AdaptiveUIScreen.AdaptiveUIscreens"
             android:exported="false" />
         <activity
