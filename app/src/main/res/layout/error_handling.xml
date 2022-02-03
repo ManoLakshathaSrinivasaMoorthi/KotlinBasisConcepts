@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/errorLayout"
+    android:visibility="gone"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/errorTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/title"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/errorMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:text="@string/textmessage"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/errorTitle"
+        app:layout_constraintTop_toTopOf="@+id/errorTitle" />
+
+    <Button
+        android:id="@+id/btnRetry"
+        android:layout_width="98dp"
+        android:layout_height="39dp"
+
+        android:layout_gravity="center_horizontal"
+        android:text="Retry"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/errorMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        app:layout_constraintVertical_bias="0.449"
+        tools:layout_editor_absoluteX="143dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

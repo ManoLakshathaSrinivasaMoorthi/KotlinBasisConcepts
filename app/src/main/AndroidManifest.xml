@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NotePad">
         <activity
+            android:name=".newsapp.NewsDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".AdaptiveUIScreen.AdaptiveUIscreens"
             android:exported="false" />
         <activity
@@ -31,7 +34,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".AdaptiveUIScreen.SCreenActivity"
+            android:name=".newsapp.NewsActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
