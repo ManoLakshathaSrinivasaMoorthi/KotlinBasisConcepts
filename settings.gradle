@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "NotePad"
 include ':app'
+include ':login'
