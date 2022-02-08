@@ -3,20 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Data/CrudOperation/app/src/main/res/drawable/ic_add.xml" value="0.12222222222222222" />
+        <entry key="..\:/Data/CrudOperation/app/src/main/res/layout-land/activity_adaptive_uiscreens.xml" value="0.1" />
+        <entry key="..\:/Data/CrudOperation/app/src/main/res/layout-sw300dp-h500dp-long/activity_ui_screen.xml" value="0.17083333333333334" />
+        <entry key="..\:/Data/CrudOperation/app/src/main/res/layout/activity_adaptive_uiscreens.xml" value="0.1" />
         <entry key="..\:/Data/CrudOperation/app/src/main/res/layout/activity_add_notes_by_retrofit.xml" value="0.16981132075471697" />
-        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/drawable/button1.xml" value="0.23958333333333334" />
-        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/drawable/ic_rain.xml" value="0.23958333333333334" />
-        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout-land/activity_adaptive_uiscreens.xml" value="0.10493827160493827" />
-        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout-sw720dp-land/activity_screen.xml" value="0.1" />
-        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout-sw720dp-port/activity_screen.xml" value="0.10078125" />
-        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout-w320dp-port/activity_screen.xml" value="0.134375" />
-        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/activity_adaptive_uiscreens.xml" value="0.2234375" />
-        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/activity_decryption.xml" value="0.13072916666666667" />
-        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/activity_encrption.xml" value="0.13072916666666667" />
-        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/activity_home.xml" value="0.11666666666666667" />
-        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/activity_screen.xml" value="0.134375" />
-        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/forecast_grid.xml" value="0.2234375" />
-        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/simple_selectable_list_item.xml" value="0.11927083333333334" />
+        <entry key="..\:/Data/CrudOperation/app/src/main/res/layout/activity_decryption.xml" value="0.17083333333333334" />
+        <entry key="..\:/Data/CrudOperation/app/src/main/res/layout/activity_encrption.xml" value="0.17083333333333334" />
+        <entry key="..\:/Data/CrudOperation/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Data/CrudOperation/app/src/main/res/layout/activity_read_notes_by_retrofit.xml" value="0.1" />
+        <entry key="..\:/Data/CrudOperation/app/src/main/res/layout/activity_screen.xml" value="0.24010416666666667" />
+        <entry key="..\:/Data/CrudOperation/app/src/main/res/layout/activity_ui_screen.xml" value="0.1" />
+        <entry key="..\:/Data/CrudOperation/app/src/main/res/layout/app_bar_main.xml" value="0.1921875" />
+        <entry key="..\:/Data/CrudOperation/app/src/main/res/layout/fragment_home.xml" value="0.1921875" />
+        <entry key="..\:/Data/CrudOperation/app/src/main/res/layout/home_layout.xml" value="0.178125" />
+        <entry key="..\:/Data/CrudOperation/app/src/main/res/layout/home_post_layout.xml" value="0.178125" />
+        <entry key="..\:/Data/CrudOperation/app/src/main/res/layout/notes_item.xml" value="0.1" />
+        <entry key="..\:/Data/CrudOperation/app/src/main/res/menu/bottom_menu.xml" value="0.1921875" />
       </map>
     </option>
   </component>
