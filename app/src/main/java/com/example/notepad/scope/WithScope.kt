@@ -1,8 +1,8 @@
 package com.example.notepad.scope
 
-class WitrhScope {
+class WithScope {
     class Person {
-        var name: String = "Sriyank Siddhartha"
+        var name: String = "Priya"
         var age: Int = 26
     }
 
@@ -21,7 +21,6 @@ class WitrhScope {
             "He is a freak who loves to teach in his own way" // will be returned and stored in 'bio' String variable
         }
 
-//    println("Age after five years is $ageAfterFiveYears")
         println(bio)
     }
 }
