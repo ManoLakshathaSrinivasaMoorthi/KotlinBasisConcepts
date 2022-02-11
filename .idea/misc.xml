@@ -16,18 +16,21 @@
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout-w320dp-port/activity_screen.xml" value="0.134375" />
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/activity_adaptive_uiscreens.xml" value="0.2234375" />
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/activity_add_notes_by_retrofit.xml" value="0.19021739130434784" />
+        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/activity_broast_cast_receivers.xml" value="0.1" />
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/activity_decryption.xml" value="0.13072916666666667" />
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/activity_encrption.xml" value="0.13072916666666667" />
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/activity_home.xml" value="0.11666666666666667" />
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/activity_main.xml" value="0.2265625" />
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/activity_news.xml" value="0.1265625" />
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/activity_news_detail.xml" value="0.1" />
+        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/activity_notification.xml" value="0.1634963768115942" />
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/activity_oops.xml" value="0.2265625" />
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/activity_screen.xml" value="0.1" />
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/activity_web_socket.xml" value="0.228125" />
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/error_handling.xml" value="0.128125" />
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/forecast_grid.xml" value="0.2234375" />
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/item_layout.xml" value="0.22552083333333334" />
+        <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/notification.xml" value="0.264" />
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/layout/simple_selectable_list_item.xml" value="0.11927083333333334" />
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/menu/menu.xml" value="0.11458333333333333" />
         <entry key="..\:/KotlinBasisConcepts/app/src/main/res/menu/menu_news.xml" value="0.12708333333333333" />
